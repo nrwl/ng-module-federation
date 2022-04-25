@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/shared-components",
+  "sourceRoot": "libs/shared-components/src",
+  "prefix": "ng-module-federation",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/shared-components"],
+      "options": {
+        "project": "libs/shared-components/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared-components/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared-components/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared-components"],
+      "options": {
+        "jestConfig": "libs/shared-components/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared-components/**/*.ts",
+          "libs/shared-components/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
