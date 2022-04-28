@@ -7,11 +7,11 @@
       "executor": "@nrwl/cypress:cypress",
       "options": {
         "cypressConfig": "apps/cart-e2e/cypress.json",
-        "devServerTarget": "cart:serve:development"
+        "devServerTarget": "host:serve:development"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "cart:serve:production"
+          "devServerTarget": "host:serve:production"
         }
       }
     },
