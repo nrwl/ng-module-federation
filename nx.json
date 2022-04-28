@@ -8,22 +8,14 @@
     "packageManager": "npm"
   },
   "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": "*",
     ".eslintrc.json": "*"
   },
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "NDY1ZjVkMGUtOGRjNy00NWMzLThjNWQtOGM4OTA1Zjc5ZTRkfHJlYWQtd3JpdGU="
       }
     }
