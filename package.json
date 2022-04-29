@@ -8,7 +8,8 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "echo": "echo 1234"
+    "echo": "echo 1234",
+    "e2es-seq": "npx nx e2e about-e2e --no-watch && npx nx e2e cart-e2e --no-watch"
   },
   "private": true,
   "dependencies": {

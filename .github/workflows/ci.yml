@@ -18,6 +18,8 @@ jobs:
         npx nx affected --target=lint --parallel=3
         npx nx affected --target=test --parallel=3 --ci --code-coverage
         npx nx affected --target=build --configuration=development && npx nx affected --target=e2e --max-parallel=1 --no-watch
+      final-commands: |
+        npx nx-cloud record -- npm run e2es-seq
 
   agents:
     name: Nx Cloud - Agents
