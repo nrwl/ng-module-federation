@@ -1,6 +1,5 @@
 {
   "projectType": "application",
-  "root": "apps/shop",
   "sourceRoot": "apps/shop/src",
   "prefix": "ng-module-federation",
   "targets": {

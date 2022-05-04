@@ -1,6 +1,5 @@
 {
   "projectType": "library",
-  "root": "libs/shared-components",
   "sourceRoot": "libs/shared-components/src",
   "prefix": "ng-module-federation",
   "targets": {

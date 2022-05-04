@@ -1,6 +1,5 @@
 {
   "projectType": "library",
-  "root": "libs/shop-main",
   "sourceRoot": "libs/shop-main/src",
   "prefix": "ng-module-federation",
   "targets": {
