@@ -1,6 +1,5 @@
 {
   "projectType": "application",
-  "root": "apps/host",
   "sourceRoot": "apps/host/src",
   "prefix": "ng-module-federation",
   "targets": {

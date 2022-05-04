@@ -1,6 +1,5 @@
 {
   "projectType": "application",
-  "root": "apps/cart",
   "sourceRoot": "apps/cart/src",
   "prefix": "ng-module-federation",
   "targets": {
