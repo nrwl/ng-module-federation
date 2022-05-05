@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "nx",
-    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
+    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main && npx ts-node tools/file-server-replacement.ts",
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
@@ -48,6 +48,7 @@
     "eslint": "~8.12.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
+    "http-server": "^14.1.0",
     "jest": "27.5.1",
     "jest-preset-angular": "11.1.1",
     "ng-packagr": "^13.0.0",
@@ -62,4 +63,3 @@
     "typescript": "~4.6.2"
   }
 }
-
