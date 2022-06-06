@@ -8,7 +8,7 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "echo": "echo123"
+    "echo": "echo 1234"
   },
   "private": true,
   "dependencies": {
