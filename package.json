@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "nx",
-    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2020 browser module main",
+    "postinstall": "node ./decorate-angular-cli.js",
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
@@ -20,26 +20,28 @@
     "@angular/platform-browser": "16.2.11",
     "@angular/platform-browser-dynamic": "16.2.11",
     "@angular/router": "16.2.11",
-    "@nrwl/angular": "17.0.2",
     "rxjs": "7.8.0",
     "tslib": "^2.0.0",
-    "zone.js": "0.13.0"
+    "zone.js": "0.13.0",
+    "@nx/angular": "17.0.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "16.2.8",
+    "@angular-devkit/core": "16.2.8",
+    "@angular-devkit/schematics": "16.2.8",
     "@angular-eslint/eslint-plugin": "16.0.2",
     "@angular-eslint/eslint-plugin-template": "16.0.2",
     "@angular-eslint/template-parser": "16.0.2",
-    "@angular/cli": "~14.0.0",
+    "@angular/cli": "~16.2.0",
     "@angular/compiler-cli": "16.2.11",
     "@angular/language-service": "16.2.11",
-    "@nrwl/cli": "14.0.3",
-    "@nrwl/cypress": "17.0.2",
-    "@nrwl/eslint-plugin-nx": "17.0.2",
-    "@nrwl/jest": "17.0.2",
-    "@nrwl/linter": "17.0.2",
-    "@nrwl/nx-cloud": "16.5.2",
-    "@nrwl/workspace": "17.0.2",
+    "@nrwl/web": "17.0.2",
+    "@nx/cypress": "17.0.2",
+    "@nx/eslint": "17.0.2",
+    "@nx/eslint-plugin": "17.0.2",
+    "@nx/jest": "17.0.2",
+    "@nx/workspace": "17.0.2",
+    "@schematics/angular": "16.2.8",
     "@types/jest": "29.4.1",
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "5.61.0",
@@ -49,6 +51,7 @@
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-cypress": "2.13.4",
     "jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.0.0",
     "jest-preset-angular": "13.1.2",
     "ng-packagr": "16.2.0",
     "nx": "17.0.2",
@@ -59,8 +62,6 @@
     "prettier": "2.6.2",
     "ts-jest": "29.1.0",
     "ts-node": "10.9.1",
-    "typescript": "4.9.3",
-    "jest-environment-jsdom": "^29.0.0"
+    "typescript": "4.9.3"
   }
 }
-
