@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { loadRemoteModule } from '@nx/angular/mf';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
@@ -13,17 +14,17 @@ import { RouterModule } from '@angular/router';
         {
           path: 'cart',
           loadChildren: () =>
-            import('cart/Module').then((m) => m.RemoteEntryModule),
+            loadRemoteModule('cart','./Module').then((m) => m.RemoteEntryModule),
         },
         {
           path: 'shop',
           loadChildren: () =>
-            import('shop/Module').then((m) => m.RemoteEntryModule),
+            loadRemoteModule('shop','./Module').then((m) => m.RemoteEntryModule),
         },
         {
           path: 'about',
           loadChildren: () =>
-            import('about/Module').then((m) => m.RemoteEntryModule),
+            loadRemoteModule('about','./Module').then((m) => m.RemoteEntryModule),
         },
       ],
       { initialNavigation: 'enabledBlocking' }

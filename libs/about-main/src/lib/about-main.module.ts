@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { AboutMainComponent } from './about-main-component/about-main.component';
 import {SharedComponentsModule} from "@ng-module-federation/shared-components";
+import {AboutService} from './about.service';
 
 @NgModule({
   imports: [
@@ -12,10 +13,12 @@ import {SharedComponentsModule} from "@ng-module-federation/shared-components";
     RouterModule.forChild([
       {
         path: '',
+        outlet: 'about',
         component: AboutMainComponent,
       },
     ]),
   ],
+  providers: [AboutService],
   declarations: [AboutMainComponent],
 })
 export class AboutMainModule {}

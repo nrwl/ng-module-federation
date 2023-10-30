@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { AboutService } from '../about.service';
 
 @Component({
   selector: 'ng-module-federation-about-main',
@@ -6,4 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-main.component.css'],
 })
 export class AboutMainComponent {
+  public service = inject(AboutService);
 }
+
