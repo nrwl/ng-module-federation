@@ -12,6 +12,7 @@ import {SharedComponentsModule} from "@ng-module-federation/shared-components";
     RouterModule.forChild([
       {
         path: '',
+        outlet: 'about',
         component: AboutMainComponent,
       },
     ]),

@@ -1,9 +1,17 @@
 import { NgModule } from '@angular/core';
-import { AboutMainModule } from '@ng-module-federation/about-main';
+import { RouterModule } from '@angular/router';
+import { RemoteEntryComponent } from './entry.component';
 
 @NgModule({
   imports: [
-    AboutMainModule
+    RemoteEntryComponent,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: RemoteEntryComponent,
+        loadChildren: () => import('@ng-module-federation/about-main').then((m) => m.AboutMainModule)
+      }
+    ]),
   ],
   providers: [],
 })
