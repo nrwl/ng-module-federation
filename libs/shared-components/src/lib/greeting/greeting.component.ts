@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {Input} from "@angular/core";
+import { Component, inject } from '@angular/core';
+import { GreetingService } from '../greeting.service';
 
 @Component({
   selector: 'ng-module-federation-greeting',
@@ -7,5 +7,6 @@ import {Input} from "@angular/core";
   styleUrls: ['./greeting.component.css'],
 })
 export class GreetingComponent {
-  @Input() from = "";
+  private service = inject(GreetingService);
+  public from = this.service.from$;
 }

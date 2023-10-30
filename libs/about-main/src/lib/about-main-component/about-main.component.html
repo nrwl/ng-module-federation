@@ -1,4 +1,6 @@
 <div>
     <p>About Main Component</p>
-    <ng-module-federation-greeting from="about"></ng-module-federation-greeting>
+    <ng-module-federation-greeting></ng-module-federation-greeting>
+    <textarea #txt (change)="service.updateContent(txt.value)"></textarea>
+    <pre *ngIf="(service.content$ | async) as content">{{content}}</pre>
 </div>
